@@ -1,6 +1,7 @@
-class kelimek_na_kostky:
+class KelimekNaKostky:
     def __init__(self, pocet_kostek=2):
         ...
+
     def hod_kostkami(self) -> list:
         """
         hod_kostkami - hodi kostkami
