@@ -13,15 +13,15 @@ class Barva(Enum):
 
     def __str__(self) -> str:
         if self == Barva.bila:
-            return 'bila'
+            return 'bílá'
         else:
-            return 'cerna'
+            return 'černá'
 
     @classmethod
-    def load(cls, Barva_str: str) -> 'Barva':
-        if Barva_str == 'cerna':
+    def load(str) -> 'Barva':
+        if str == 'cerna':
             return Barva.cerna
-        elif Barva_str == 'bila':
+        elif str == 'bila':
             return Barva.bila
         else:
-            raise ValueError(f"{Barva_str} není platná barva")
+            raise Exception("%s není platná barva" % str)

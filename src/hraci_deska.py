@@ -63,7 +63,7 @@ class Hraci_deska:
         return all(x.dostane_do_cile() <= 6 for x in self.seznam_kamenu(barva))
     
     def posune_kamen(self, kamen, hodnota_kostky):
-        if not self.kameny.__contains__(kamen):
+        if not self._kameny.__contains__(kamen):
             raise Exception('Ten kámen není ve hrací desce')
         if not self.muze_posunout(kamen, hodnota_kostky):
             raise Exception('Nemůže posunout')
@@ -163,4 +163,4 @@ class Hraci_deska:
                 data[pozice] = {'barva': kameny[0].barva.__str__(), 'pocet': len(kameny)}
         return json.dumps(data)
     def odebrani_kamene(self, kamen):
-        self.kamen.remove(kamen)
+        self._kameny.remove(kamen)
